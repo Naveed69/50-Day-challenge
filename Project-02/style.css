@@ -1,0 +1,63 @@
+body {
+    margin:0px;
+    padding:20px;
+    font-family:"Montserrat";
+    display:flex;
+    background: #f2f2f2;
+    justify-content:center;
+}
+
+.container{
+    box-sizing:border-box;
+    background:white;
+    display:flex;
+    flex-direction:column;
+    width:600px;
+    justify-content:center;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+    border-radius:10px;
+    padding:20px;
+}
+
+#Bill-amount{
+    margin:5px;
+
+}
+#bill{
+    border:1px solid #ddd;
+    border-radius:5px;
+
+}
+
+#percentage-lable{
+    margin:5px;
+}
+
+#tipPercentage{
+    border:1px solid #ddd;
+    border-radius:5px;
+
+}
+
+
+.btn{
+    background:  #32d14c;
+    margin-top:10px;
+   
+    padding:8px;
+    color:white;
+    border-radius:4px;
+    width:100%;
+    text-transform:uppercase;
+    transition:background-color .3s ease;
+}
+
+#btn:hover{
+    background-color:#4af066;
+
+}
+
+#result{
+    font-size:18px;
+    font-weight: bold;
+}
