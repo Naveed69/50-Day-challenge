@@ -15,7 +15,7 @@ function displayReceipes(Recipes){
         recipes_title.innerText=recipes.title;
 
         let recipes_ingrediant=document.createElement("p");
-        recipes_ingrediant.innerText=`<strong> Ingredients: </strong> ${recipes.extendedIngredients.map((ing)=>ing.original).join(", ")}`;
+        recipes_ingrediant.innerText=` <strong>Ingredients: </strong> ${recipes.extendedIngredients.map((ing)=>ing.original).join(", ")}`;
 
         let recipes_url=document.createElement("a");
         recipes_url.href=recipes.spoonacularSourceUrl;
