@@ -1,0 +1,30 @@
+body{
+    margin:0px;
+}
+.container{
+    margin:30px;
+    display:flex;
+    flex-direction:column;
+    
+}
+
+.container h1{
+    font-weight:bold;
+    font-size:40px;
+    font-family:Times, serif
+}
+
+.container #btn{
+    padding:10px;
+    width:120px;
+    background:rgba(132, 202, 246, 0.966);
+    color:white;
+    border-radius:10px;
+    border:0px solid;
+    font-size:24px;
+    transition:background-color .2s ease;
+}
+
+.container #btn:hover{
+    background-color:rgba(118, 193, 240, 0.966);
+}
