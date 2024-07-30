@@ -14,6 +14,10 @@ body{
     font-family:Times, serif
 }
 
+.container #dice{
+    width:50px;
+}
+
 .container #btn{
     padding:10px;
     width:120px;
@@ -23,13 +27,14 @@ body{
     border:0px solid;
     font-size:24px;
     transition:background-color .2s ease;
+    margin:20px
 }
 
 .container #btn:hover{
     background-color:rgba(118, 193, 240, 0.966);
 }
 
-.container #result{
+.container span{
     width:500px;
     height:80px;
     background: #f7f7f7;
