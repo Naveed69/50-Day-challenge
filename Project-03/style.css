@@ -5,7 +5,7 @@ body{
 }
 
 .header{
-    background:#0c2461;
+    background:#0c4661;
     color:white;
     height:15vh;
     width:100%;
@@ -63,7 +63,7 @@ h1{
 }
 
 .recipe-item a{
-    background:#0c2461;
+    background:#0c4661;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -79,7 +79,7 @@ h1{
 }
 
 .recipe-item a:hover{
-    background:#1e3799;
+    background:#0c4661;
 }
 
 @media (max-width:768px){
