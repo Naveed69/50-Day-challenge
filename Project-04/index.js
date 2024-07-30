@@ -11,7 +11,7 @@ function rollDice(){
 }
 
 function updateRollHistory(){
-    roll_History.innerHTML=" ";
+    roll_History.innerHTML="";
     for(let i=0;i<history.length;i++){
         const listItem=document.createElement("li");
         listItem.innerHTML=` Roll ${i+1}: <span>${getdiceFace(history[i])}</span>`;
@@ -36,7 +36,7 @@ function getdiceFace(ranNo){
         case 6:
             return "&#9861";  
         default:
-            " ";      
+            "";      
     }
 }
 
