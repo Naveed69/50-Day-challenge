@@ -2,22 +2,30 @@ const button=document.getElementById("btn");
 const dice=document.getElementById("dice");
 const roll_History=document.getElementById("roll-history");
 let history=[];
+
+
 function rollDice(){
     const ranNo=Math.floor(Math.random()*6)+1;
     const diceFace=getdiceFace(ranNo);
     dice.innerHTML=diceFace;
-    history.push(diceFace);
+    history.push(ranNo);
     updateRollHistory();
 }
 
 function updateRollHistory(){
     roll_History.innerHTML="";
-    for(let i=0;i<history.length;i++){
+    history.forEach((l,i)=>{
         const listItem=document.createElement("li");
-        listItem.innerHTML=` Roll ${i+1}: <span>${getdiceFace(history[i])}</span>`;
+        listItem.innerHTML=`Roll ${i+1}: <span>${getdiceFace(l)}</span>`;
         roll_History.appendChild(listItem);
-    }
-    
+    })   
+
+    // history.forEach((ele,i)=>{
+  
+    //     const li=document.createElement("li")
+    //     li.innerHTML=`Roll ${i+1}: <span>${getdiceFace(ele)}</span>`
+    //     roll_History.appendChild(li)
+    //   })
 }
 
 
