@@ -12,11 +12,14 @@ body{
 
 .heading{
     margin:20px;
+    color: #2c3e2c;
 }
 
 .timer{
+    font-size:72px;
     max-width:400px;
     height:200px;
+    color:#2c3e2c;
 }
 
 .start{
