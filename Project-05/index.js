@@ -3,7 +3,7 @@ const stopBtn=document.getElementById("stop");
 const resetBtn=document.getElementById("reset");
 let timerLable=document.getElementById("timer");
 let interval;
-let timeleft=15; 
+let timeleft=1500; 
 
 function updateTime(){
     let min=Math.floor(timeleft/60);
@@ -19,7 +19,7 @@ function startFn(){
         if(timeleft==0){
             clearInterval(interval);
                 alert("Time's Up...!!!");
-                timeleft=15;
+                timeleft=1500;
         }
     },1000
     )
@@ -32,7 +32,7 @@ function stopFn(){
 
 function resetFn(){
     clearInterval(interval);
-    timeleft=15;
+    timeleft=1500;
     updateTime();
 }
 
