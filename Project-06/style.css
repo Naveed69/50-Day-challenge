@@ -33,6 +33,20 @@ button{
     font-size:20px;
 
 }
+.rock{
+    font-size:30px;
+    background:rgb(214, 66, 66);
+}
+
+.papper{
+    font-size:30px;
+    background:lightgreen;
+}
+
+.scissor{
+    font-size:30px;
+    background:lightblue;
+}
 
 .points{
     margin:10px;
