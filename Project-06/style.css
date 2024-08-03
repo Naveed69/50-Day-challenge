@@ -1,6 +1,7 @@
 body{
     margin:0px;
     padding:0px;
+    font-size: 2rem;
 }
 
 .container{
@@ -23,9 +24,16 @@ body{
 
 
 button{
-    margin:0px 10px;
-    width:50px;
-    height:50px;
+    margin:0px 1.5rem;
+   padding:0.5rem;
+   border-radius: 5px;
+    font-size:3rem;
+    border:none;
+    transition:all 0.3s ease-in-out; 
+}
+
+button:hover{
+    opacity:70%;
 }
 
 .pointsContainer{
@@ -34,17 +42,14 @@ button{
 
 }
 .rock{
-    font-size:30px;
     background:rgb(214, 66, 66);
 }
 
 .papper{
-    font-size:30px;
     background:lightgreen;
 }
 
 .scissor{
-    font-size:30px;
     background:lightblue;
 }
 
