@@ -57,10 +57,10 @@ button:hover{
     margin:10px;
 }
 
-.humanP{
+#humanP{
     color:blue;
 }
 
-.computerP{
+#computerP{
     color:red;
 }
