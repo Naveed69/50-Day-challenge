@@ -30,10 +30,12 @@ function playRound(pSuggestion,cSuggestion){
         pSuggestion === "papper" && cSuggestion === "rock"
         ){
             playerScore++;
+            console.log(playerScore);
             ps.textContent=playerScore;
             return "You Win!";
         }else {
             computerScore++;
+            console.log(computerScore);
             cs.textContent=computerScore;
             return "You lose!";
         }
