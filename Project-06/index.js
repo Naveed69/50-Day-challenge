@@ -10,7 +10,7 @@ buttons.forEach((button)=>{
     button.addEventListener("click", ()=>
     {
         const result=playRound(button.id,computerPlay());
-        res.textContent=result;
+        res.innerHTML=result;
     });
 });
 
