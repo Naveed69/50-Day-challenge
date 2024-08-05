@@ -5,13 +5,13 @@ body{
 }
 
 .container{
-    margin-top:100px;
+    margin-top:80px;
     display:flex;
     align-items:center;
     flex-direction:column;
 }
 
-p{
+.timer{
     font-size:2.5rem;
     font-family:'Times New Roman', Times, serif;
     color: rgb(0, 149, 255);
@@ -22,6 +22,7 @@ p{
 .header{
     font-size:3rem;
     font-family:sans-serif;
+    font-weight:bold;
 }
 
 button{
@@ -40,11 +41,23 @@ button{
     background:rgb(108, 234, 108);
 }
 
+.start:hover{
+    background:rgb(50, 229, 50);
+}
+
 .stop{
     background:rgb(201, 59, 59);
     margin:0 10px;
 }
 
+.stop:hover{
+    background:rgb(193, 21, 21);
+}
+
 .reset{
-    background:gray
+    background:gray;
+}
+
+.reset:hover{
+    background:rgb(176, 175, 175);
 }
