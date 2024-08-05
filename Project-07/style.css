@@ -1,7 +1,7 @@
 body{
     margin:0px;
     padding:0px;
-    
+    background:rgb(232, 230, 230);
 }
 
 .container{
@@ -15,6 +15,8 @@ p{
     font-size:2.5rem;
     font-family:'Times New Roman', Times, serif;
     color: rgb(0, 149, 255);
+    position:relative;
+    top:-50px;
 }
 
 .header{
@@ -30,6 +32,8 @@ button{
     text-transform:uppercase;
     cursor:pointer; 
     color:aliceblue;   
+    position:relative;
+    top:-50px;
 }
 
 .start{
@@ -38,6 +42,7 @@ button{
 
 .stop{
     background:rgb(201, 59, 59);
+    margin:0 10px;
 }
 
 .reset{
