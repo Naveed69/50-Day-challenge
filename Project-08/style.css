@@ -7,11 +7,12 @@ body{
     align-items:center;
     background:#f9f9f9;
     line-height:1.6;
+    text-align: center;
 }
 
 
-form{
-    margin:50px;
+.inp{
+    margin-bottom:50px;
 }
 
 .ilab{
