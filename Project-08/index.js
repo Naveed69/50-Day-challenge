@@ -4,8 +4,24 @@ const inputEl=document.getElementById('ilab');
 const searchResultsEl=document.querySelector(".search-results");
 const newImage=document.getElementById('show-more-images');
 
+let inputData="";
+let page=1;
+
+async function searchImages(){
+    inputData=inputEl.value;
+    let url=`https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey};`
+    console.log(url);
+    const response=await fetch(url);
+    const data=await response.json();
+    if(page===1)
+    {
+        searchResultsEl.innerHTML="";
+    }
+}
 
 formEl.addEventListener("submit", (eve)=>{
     eve.preventDefault();
+    page=1;
     console.log("Clicked submit");
+    searchImages();
 })
