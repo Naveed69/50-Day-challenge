@@ -17,6 +17,16 @@ async function searchImages(){
     {
         searchResultsEl.innerHTML="";
     }
+    const results=data.results;
+
+    const imageWrapper=document.createElement("div");
+    imageWrapper.classList.add("show-more-images");
+
+    if(page>1){
+        newImage.style.display=block;
+    }
+   
+
 }
 
 formEl.addEventListener("submit", (eve)=>{
