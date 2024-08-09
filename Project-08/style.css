@@ -70,6 +70,13 @@ body{
     transition:0.3s ease-in-out;
 }
 
+.search-resultre img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    transition:0.3s ease-in-out;
+}
+
 .search-result a{
     padding:10px;
     display:block;
