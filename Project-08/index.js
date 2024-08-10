@@ -10,7 +10,6 @@ let page=1;
 async function searchImages(){
     inputData=inputEl.value;
     let url=`https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey};`
-    console.log(url);
     const response=await fetch(url);
     const data=await response.json();
     if(page===1)
@@ -18,7 +17,6 @@ async function searchImages(){
         searchResultsEl.innerHTML="";
     }
     const results=data.results;
-    console.log(results);
     results.map((result)=>{
         const imageWrapper=document.createElement("div");
         imageWrapper.classList.add("search-result");
@@ -36,8 +34,9 @@ async function searchImages(){
     
     page++;
 
+
     if(page>1){
-        newImage.style.display=block;
+        newImage.style.display="block";
     }
    
 
@@ -46,6 +45,9 @@ async function searchImages(){
 formEl.addEventListener("submit", (eve)=>{
     eve.preventDefault();
     page=1;
-    console.log("Clicked submit");
+    searchImages();
+})
+
+newImage.addEventListener("click", ()=>{
     searchImages();
 })
