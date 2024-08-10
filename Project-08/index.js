@@ -19,8 +19,20 @@ async function searchImages(){
     }
     const results=data.results;
 
-    const imageWrapper=document.createElement("div");
-    imageWrapper.classList.add("show-more-images");
+    results.map((result)=>{
+        const imageWrapper=document.createElement("div");
+        imageWrapper.classList.add("show-more-images");
+        const image=document.createElement("img");
+        image.src = result.url.small;
+        const imageLink=document.createElement("a");
+        imageLink.href = result.links.html;
+        imageLink.target ="_blank";
+        imageLink.textContent=result.alt_description;
+        imageWrapper.append(image);
+        imageWrapper.append(imageLink);
+    })
+    
+    
 
     if(page>1){
         newImage.style.display=block;
