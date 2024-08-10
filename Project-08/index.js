@@ -18,21 +18,23 @@ async function searchImages(){
         searchResultsEl.innerHTML="";
     }
     const results=data.results;
-
+    console.log(results);
     results.map((result)=>{
         const imageWrapper=document.createElement("div");
-        imageWrapper.classList.add("show-more-images");
+        imageWrapper.classList.add("search-result");
         const image=document.createElement("img");
-        image.src = result.url.small;
+        image.src = result.urls.small;
+        image.alt=result.alt_description;
         const imageLink=document.createElement("a");
         imageLink.href = result.links.html;
         imageLink.target ="_blank";
         imageLink.textContent=result.alt_description;
         imageWrapper.append(image);
         imageWrapper.append(imageLink);
+        searchResultsEl.append(imageWrapper);
     })
     
-    
+    page++;
 
     if(page>1){
         newImage.style.display=block;
