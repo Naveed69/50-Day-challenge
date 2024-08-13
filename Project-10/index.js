@@ -37,8 +37,14 @@ const team = [
    * @param {string} alt - Alt text for image
    * @returns An Image HTML Element
    */
+
+
   const getImageElement = (src, alt) => {
-    return;
+    const newImage = document.createElement("img");
+    newImage.src=src;
+    newImage.alt=alt;
+    console.log(newImage);
+    return newImage;
   };
   
   /**
@@ -52,17 +58,25 @@ const team = [
    */
   function generateCard(id, fullName, jobTitle, bio, avatar) {
     //1. Create a new "section" element and set the className and id
+    const sessionEl=document.createElement("session");
+    sessionEl.setAttribute("class","card")
+    sessionEl.setAttribute("id",id);
   
     //2. Generate the image using getImageElement() function
     //Hint - Use fullname as alt for the image.
+    getImageElement(avatar,fullName);
   
     //3. Create a div for text content
+    const divEl=document.createElement("div");
   
     //4. Create an h2 for fullName
+    const h2El=document.createElement("h2");
   
     //5. Create an h3 for jobTitle
+    const h3El=document.createElement("h3");
   
     //6. Create a p for bio
+    const pEl=document.createElement("p");
   
     //7. Append the fullName, jobTitle, and bio element
     //   to the div created for text.
