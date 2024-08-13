@@ -40,10 +40,9 @@ const team = [
 
 
   const getImageElement = (src, alt) => {
-    const newImage = document.createElement("img");
+    const newImage = document.createElement('img');
     newImage.src=src;
     newImage.alt=alt;
-    console.log(newImage);
     return newImage;
   };
   
@@ -64,28 +63,37 @@ const team = [
   
     //2. Generate the image using getImageElement() function
     //Hint - Use fullname as alt for the image.
-    getImageElement(avatar,fullName);
+    const newImageEl = getImageElement(getImageElement(avatar,fullName));
   
     //3. Create a div for text content
     const divEl=document.createElement("div");
   
     //4. Create an h2 for fullName
     const h2El=document.createElement("h2");
+    h2El.innerHTML=fullName;
   
     //5. Create an h3 for jobTitle
     const h3El=document.createElement("h3");
+    h3El.innerHTML=jobTitle;
   
     //6. Create a p for bio
     const pEl=document.createElement("p");
+    pEl.innerHTML=bio;
   
     //7. Append the fullName, jobTitle, and bio element
     //   to the div created for text.
+
+    divEl.append(h2El);
+    divEl.append(h3El);
+    divEl.append(pEl);
   
     //8. Append the Image and the Text div
     //   to the new section you created in step 1
+    sessionEl.append(newImageEl);
+    sessionEl.append(divEl);
   
     //Return the new section element created.
-    return;
+    return sessionEl;
   }
   
   /**
@@ -94,7 +102,19 @@ const team = [
    */
   function generateCardArray(data) {
     const cards = [];
+    // {
+    //     id: "anna",
+    //     fullName: "Anna Kendrick",
+    //     jobTitle: "Front-end Ninja",
+    //     bio:
+    //       "Bibliophile, loves to dive into fictional worlds, ships JS code like brownies",
+    //     avatar: "/session5-takehome/avataaars/annakendrick.svg"
+    //   },
     //Add logic to populate `cards` array below
+    team.forEach(element => {
+        cards.push(generateCard(element.id, element.fullName, element.jobTitle, element.bio, element.avatar))
+    });
+
   
     //Return cards array
     return cards;
