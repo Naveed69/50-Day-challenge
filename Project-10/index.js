@@ -6,7 +6,7 @@ const team = [
       jobTitle: "Front-end Ninja",
       bio:
         "Bibliophile, loves to dive into fictional worlds, ships JS code like brownies",
-      avatar: "/session5-takehome/avataaars/annakendrick.svg"
+      avatar: "./avataaars/annakendrick.svg"
     },
     {
       id: "harry",
@@ -14,7 +14,7 @@ const team = [
       jobTitle: "Illustrator",
       bio:
         "Creates new illustrations each week, will kill for coffee, and loves beaches",
-      avatar: "/session5-takehome/avataaars/harryfn.svg"
+      avatar: "./avataaars/harryfn.svg"
     },
     {
       id: "sofia",
@@ -22,7 +22,7 @@ const team = [
       jobTitle: "Backend Engineer",
       bio:
         "Donuts over waffles. Martinis over whiskeys. Typescript over anything.",
-      avatar: "/session5-takehome/avataaars/sofiasul.svg"
+      avatar: "./avataaars/sofiasul.svg"
     }
   ];
   
@@ -58,12 +58,12 @@ const team = [
   function generateCard(id, fullName, jobTitle, bio, avatar) {
     //1. Create a new "section" element and set the className and id
     const sessionEl=document.createElement("session");
-    sessionEl.setAttribute("class","card")
+    sessionEl.setAttribute("class","team-member")
     sessionEl.setAttribute("id",id);
   
     //2. Generate the image using getImageElement() function
     //Hint - Use fullname as alt for the image.
-    const newImageEl = getImageElement(getImageElement(avatar,fullName));
+    const newImageEl = getImageElement(avatar,fullName);
   
     //3. Create a div for text content
     const divEl=document.createElement("div");
@@ -102,16 +102,8 @@ const team = [
    */
   function generateCardArray(data) {
     const cards = [];
-    // {
-    //     id: "anna",
-    //     fullName: "Anna Kendrick",
-    //     jobTitle: "Front-end Ninja",
-    //     bio:
-    //       "Bibliophile, loves to dive into fictional worlds, ships JS code like brownies",
-    //     avatar: "/session5-takehome/avataaars/annakendrick.svg"
-    //   },
     //Add logic to populate `cards` array below
-    team.forEach(element => {
+    data.forEach(element => { 
         cards.push(generateCard(element.id, element.fullName, element.jobTitle, element.bio, element.avatar))
     });
 
@@ -124,7 +116,8 @@ const team = [
   
   //Run a loop for the cardsArray and append its elements to content.
   for (let card of cardsArray) {
-    content.append(card);
+    content.innerContent="";
+    content.appendChild(card);
   }
   //Modify Code above this line
   

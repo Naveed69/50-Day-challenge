@@ -35,6 +35,8 @@ body {
   
   .team-member img {
     margin: 1rem 0;
+    height:100px;
+    width:100px;
   }
   
   #anna {
