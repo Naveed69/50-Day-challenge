@@ -116,7 +116,7 @@ const team = [
   
   //Run a loop for the cardsArray and append its elements to content.
   for (let card of cardsArray) {
-    content.innerContent="";
+    
     content.appendChild(card);
   }
   //Modify Code above this line
