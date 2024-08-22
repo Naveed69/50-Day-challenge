@@ -1,0 +1,26 @@
+body{
+  margin:0px;
+  padding:50px;
+  display:flex;
+  justify-content:center;
+  background: rgba(48, 153, 194, 0.8);
+}
+
+.quiz-container{
+  background:#ddd;
+  height:350px;
+  width:350px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  border-radius:10px;
+}
+
+button{
+  border:none;
+  border-radius:5px;
+  padding:10px;
+  background:lightseagreen;
+  width:80px;
+}
