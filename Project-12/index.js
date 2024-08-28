@@ -60,3 +60,25 @@ submitButton.addEventListener("click", () => {
 nextButton.addEventListener("click", () => {
   // Write the JS code that you want to be executed each time the Next button is clicked.
 });
+
+const question=document.querySelector("#question");
+const answer_list=document.getElementById("answer-list");
+const submitEl=documnent.getElementById("submit");
+const nextEl=document.getElementById("next");
+
+let score=0;
+let questionIndex=0;
+question.innerHTML="Hello";
+function loadQuestion(){
+
+    
+    // for(let i=0;i<questions.length;i++){
+    //     question.innerText=questions[i].text;
+        
+    // }
+
+    submitEl.hidden=false;
+    nextEl.hidden=true;
+}
+
+loadQuestion();
