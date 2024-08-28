@@ -53,32 +53,56 @@ const questions = [
 ];
 
 
+const question=document.querySelector("#question");
+const answer_list=document.getElementById("answer-list");
+const submitButton=document.getElementById("submit");
+const nextButton=document.getElementById("next");
+
+let score=0;
+let questionIndex=0;
+function loadQuestion(){
+  submitButton.hidden=false;
+  nextButton.hidden=true;
+
+  question.innerText=questions[questionIndex].text;
+  answer_list.innerText="";
+
+  for(let i=0;i<4;i++){
+      const liEl=document.createElement("li");
+      liEl.innerHTML=`<input type="radio" name="qusetion" value="${i}"> ${questions[questionIndex].options[i]}`;
+      answer_list.appendChild(liEl); 
+  }
+}
+
+loadQuestion();
+
 submitButton.addEventListener("click", () => {
   // Write the JS code that you want to be executed each time the Submit button is clicked.
+  
+  const selectedAnswer=document.querySelector('input[name="qusetion"]:checked');
+  if(!selectedAnswer){
+      alert('Please select an answer!');
+      return;
+  }
+  if(selectedAnswer.value == questions[questionIndex].correct){
+      score++;
+  }
+
+  const h=questions[questionIndex].correct
+  answer_list.children[h].style.backgroundColor="lightgreen";
+
+  submitButton.hidden=true;
+  nextButton.hidden=false;
 });
 
 nextButton.addEventListener("click", () => {
   // Write the JS code that you want to be executed each time the Next button is clicked.
+  questionIndex++;
+  if(questionIndex<questions.length){
+      loadQuestion();
+  }else{
+      alert(`Your Score is ${score}/${questions.length}`);
+      score=0;
+      questionIndex=0;
+  }
 });
-
-const question=document.querySelector("#question");
-const answer_list=document.getElementById("answer-list");
-const submitEl=documnent.getElementById("submit");
-const nextEl=document.getElementById("next");
-
-let score=0;
-let questionIndex=0;
-question.innerHTML="Hello";
-function loadQuestion(){
-
-    
-    // for(let i=0;i<questions.length;i++){
-    //     question.innerText=questions[i].text;
-        
-    // }
-
-    submitEl.hidden=false;
-    nextEl.hidden=true;
-}
-
-loadQuestion();
