@@ -24,3 +24,18 @@ button{
   background:lightseagreen;
   width:80px;
 }
+
+#answer-list{
+  display:flex;
+  flex-direction: column;
+}
+
+#question{
+  text-align:center;
+}
+
+ul{
+  list-style-type: none;
+  margin-left:-90px;
+  margin-top:-10px;
+}
