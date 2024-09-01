@@ -6,7 +6,7 @@ const questions = [
   correct: 2
 },
 {
-  text: "Which of the following is a relational database management system?",
+  text: "Which of the following is relational database management system?",
   options: ["Oracle", "Scala", "Perl", "Java"],
   correct: 0
 },
