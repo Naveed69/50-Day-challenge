@@ -118,5 +118,9 @@ nextButton.addEventListener("click", () => {
     }else{
       resolve("Congratulations you have been passed..!!");
     }
+  }).then(r=>{
+    console.log(r);
+  }).catch(e=>{
+    console.log(e);
   })
 
