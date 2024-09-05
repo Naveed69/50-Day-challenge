@@ -112,8 +112,11 @@ nextButton.addEventListener("click", () => {
   }
 });
 
-function newButton(){
   const promise=new Promise((resolve,reject)=>{
-    if()
+    if(score<5){
+      reject("You have been failed");
+    }else{
+      resolve("Congratulations you have been passed..!!");
+    }
   })
-}
+
