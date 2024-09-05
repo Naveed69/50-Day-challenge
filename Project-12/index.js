@@ -113,5 +113,7 @@ nextButton.addEventListener("click", () => {
 });
 
 function newButton(){
-  
+  const promise=new Promise((resolve,reject)=>{
+    if()
+  })
 }
