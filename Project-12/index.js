@@ -111,3 +111,7 @@ nextButton.addEventListener("click", () => {
       questionIndex=0;
   }
 });
+
+function newButton(){
+  
+}
