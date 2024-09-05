@@ -21,6 +21,11 @@ const questions = [
   correct: 2
 },
 {
+  text: "What does API stand for in the context of programming?",
+  options: ["Apple Pie Interface", "Application Programming Interface", "Advanced Peripheral Integration", "Application Process Integration"],
+  correct: 1
+},
+{
   text: "Which of the following is not a valid variable name in Python?",
   options: ["_myVar", "myVar2", "2myVar", "my_var"],
   correct: 2
