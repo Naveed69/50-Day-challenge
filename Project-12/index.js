@@ -101,7 +101,7 @@ submitButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", () => {
-  // Write the JS code that you want to be executed each time the Next button is clicked.
+  // Write the JS code that you want to be executed each time the Next button is  clicked.
   questionIndex++;
   if(questionIndex<questions.length){
       loadQuestion();
