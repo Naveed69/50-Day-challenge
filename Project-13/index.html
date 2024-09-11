@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form validation</title>
 </head>
 <body>
+    <form>
+        <div>
+            <label class="name-Label" for="full-name">Full Name:</label><br>
+            <input type="text" name="full-name" placeholder="Enter Name" required>
+        </div>
+        <div>
+            <label class="email-Label" for="email">Email:</label><br>
+            <input type="gmail" name="email" placeholder="Enter Mail" required>
+        </div>
+
+        <div>
+            <label for="radio-type">Select Gender</label><br>
+            <input type="radio" name="radio-type" class="radio-input">Male
+            <input type="radio" name="radio-type" class="radio-input">Female     
+        </div>
+        <div>
+            <label for="date" class="date-label">Date</label><br>
+            <input type="date" class="date">
+        </div>
+
+        <button class="btn" type="submit">Submit</button>
+    </form>
     
 </body>
 </html>
