@@ -1,4 +1,52 @@
 body{
     margin:0px;
     padding:0px;
+    display:flex;
+    justify-content: center;
+    height:100vh;
+    align-items:center;
+    padding:10px;
+}
+
+form{
+    border:1px solid #adadad;
+    border-radius: 5px;
+    padding:50px 0px;
+    width:400px;
+    padding:5px 10px;
+}
+
+/*-----input design--------*/
+.name-input, .email-input, .select, .date{
+    padding:5px;
+    width:90%;
+    border-radius:4px;
+    border:1px solid #adadad;
+    margin:10px;
+}
+
+/*------label--------*/
+label{
+    padding:5px;
+    width:90%;
+    margin:10px;
+}
+.radio-input{ 
+    margin:10px;
+    margin-bottom:15px;
+}
+/*-----button design------*/
+.btn{
+    padding:10px 20px;
+    border:none;
+    color:azure;
+    background-color:blue;
+    border-radius:4px;
+    margin:10px
+
+}
+
+.btn:hover{
+    cursor:pointer;
+    background-color:rgb(44, 44, 240);
 }
