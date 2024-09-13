@@ -22,14 +22,21 @@ form{
     width:90%;
     border-radius:4px;
     border:1px solid #adadad;
-    margin:10px;
+    margin-top:10px;
+    margin-left:10px;
+
 }
 
 /*------label--------*/
+
+
+
 label{
     padding:5px;
     width:90%;
-    margin:10px;
+    margin-top:10px;
+    margin-left:10px;
+
 }
 .radio-input{ 
     margin:10px;
