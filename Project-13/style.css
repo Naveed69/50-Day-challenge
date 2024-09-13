@@ -8,6 +8,12 @@ body{
     padding:10px;
 }
 
+#name-validation, #email-validation, #age-validation, #select-validation{
+    margin-left:10px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
 form{
     border:1px solid #adadad;
     border-radius: 5px;
@@ -22,7 +28,7 @@ form{
     width:90%;
     border-radius:4px;
     border:1px solid #adadad;
-    margin-top:10px;
+    margin-bottom:10px;
     margin-left:10px;
 
 }
@@ -32,11 +38,9 @@ form{
 
 
 label{
-    padding:5px;
     width:90%;
-    margin-top:10px;
+    margin-top:20px;
     margin-left:10px;
-
 }
 .radio-input{ 
     margin:10px;
