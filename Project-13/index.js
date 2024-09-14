@@ -18,8 +18,12 @@ formEle.addEventListener("submit",(event)=>{
         date
     }
     if(validate(payload)){
-        
-    }
+        fetch("locationedpayload.com", {
+            method:"POST",
+            body:JSON.stringify(payload)
+        });
+    }else
+        alert("Please enter valid cread");
 
 })
 
@@ -60,7 +64,13 @@ function validateName(name){
 }
 
 function validateEmail(email){
-
+    const emailRegEx=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const emailVal=email.trim();
+    if(!emailVal){
+        emailValidation.innerText="please enter email";
+    }else if(!emailVal.match(emailRegEx)){
+        emailValidation.innerText="Please enter correct email";
+    }
 }
 
 const nameEle=formEle.elements["name-input"];
@@ -84,12 +94,6 @@ emailEle.addEventListener("focus",()=>{
 })
 
 emailEle.addEventListener("blur",(event)=>{
-    const emailRegEx=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    const emailVal=event.target.value.trim();
-    if(!emailVal){
-        emailValidation.innerText="please enter email";
-    }else if(!emailVal.match(emailRegEx)){
-        emailValidation.innerText="Please enter correct email";
-    }
+    validateEmail(event.target.value.trim());
     // emailValidation.innerHTML="enter correct mail";
 })
