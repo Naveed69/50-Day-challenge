@@ -1,5 +1,68 @@
 const formEle=document.getElementById("booking-form");
 
+let payload={};
+
+
+formEle.addEventListener("submit",(event)=>{
+    const name1=formEle.elements["name-input"].value;
+    const email=formEle.elements["email-input"].value;
+    const gender=formEle.elements["radio-input"].value;
+    const doctor=formEle.elements["doctor"].value;
+    const date=formEle.elements["date"].value;
+    event.preventDefault();
+    payload={
+        name1,
+        email,
+        gender,
+        doctor,
+        date
+    }
+    if(validate(payload)){
+        
+    }
+
+})
+
+function validate(payload){
+    let isValid=true;
+    const {name,email}=payload;
+
+    isValid=validateName(name);
+    if(!isValid)
+        return false
+
+    isValid=validateEmail(email);
+
+    if(!isValid)
+        return false
+    return isValid;
+}
+
+function validateName(name){
+    let isValid=true;
+
+    const nameRegEx=/^[a-z A-Z]+$/;
+    const nameVal=name.trim();
+    if(!nameVal){
+        isValid=false;
+        nameValidation.innerText="Please enter name";
+    }
+    else
+    if(!nameVal.match(nameRegEx)){
+        isValid=false;
+        nameValidation.innerText="do not enter special char";
+    }else if(nameVal.length<3){
+        isValid=false;
+        nameValidation.innerText="Need atlest 3 character";
+        }
+
+    return isValid;
+}
+
+function validateEmail(email){
+
+}
+
 const nameEle=formEle.elements["name-input"];
 const emailEle=formEle.elements["email-input"];
 
@@ -12,17 +75,21 @@ nameEle.addEventListener("focus",()=>{
 
 })
 
-nameEle.addEventListener("blur",()=>{
-    console.log("blur");
-    nameValidation.innerText=nameEle.value;
+nameEle.addEventListener("blur",(event)=>{
+    validateName(event.target.value);
 })
 
 emailEle.addEventListener("focus",()=>{
-    console.log("focus");
     emailValidation.innerHTML="";
 })
 
-emailEle.addEventListener("blur",()=>{
-    console.log("blur");
-    emailValidation.innerHTML="enter correct mail";
+emailEle.addEventListener("blur",(event)=>{
+    const emailRegEx=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const emailVal=event.target.value.trim();
+    if(!emailVal){
+        emailValidation.innerText="please enter email";
+    }else if(!emailVal.match(emailRegEx)){
+        emailValidation.innerText="Please enter correct email";
+    }
+    // emailValidation.innerHTML="enter correct mail";
 })
