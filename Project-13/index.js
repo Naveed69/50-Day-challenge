@@ -29,24 +29,24 @@ formEle.addEventListener("submit",(event)=>{
 
 function validate(payload){
     let isValid=true;
-    const {name,email}=payload;
-
-    isValid=validateName(name);
+    const {name1,email}=payload;
+    console.log(name1);
+    isValid=validateName(name1);
     if(!isValid)
-        return false
+        return isValid;
 
     isValid=validateEmail(email);
 
     if(!isValid)
-        return false
+        return isValid;
     return isValid;
 }
 
-function validateName(name){
+function validateName(username){
     let isValid=true;
 
     const nameRegEx=/^[a-z A-Z]+$/;
-    const nameVal=name.trim();
+    const nameVal=username;
     if(!nameVal){
         isValid=false;
         nameValidation.innerText="Please enter name";
@@ -65,7 +65,7 @@ function validateName(name){
 
 function validateEmail(email){
     const emailRegEx=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    const emailVal=email.trim();
+    const emailVal=email;
     if(!emailVal){
         emailValidation.innerText="please enter email";
     }else if(!emailVal.match(emailRegEx)){
@@ -86,7 +86,7 @@ nameEle.addEventListener("focus",()=>{
 })
 
 nameEle.addEventListener("blur",(event)=>{
-    validateName(event.target.value);
+    validateName(event.target.value.trim());
 })
 
 emailEle.addEventListener("focus",()=>{
@@ -96,4 +96,23 @@ emailEle.addEventListener("focus",()=>{
 emailEle.addEventListener("blur",(event)=>{
     validateEmail(event.target.value.trim());
     // emailValidation.innerHTML="enter correct mail";
+})
+
+window.addEventListener("beforeunload",(event)=>{
+    const payload={
+        name:nameEle.value,
+        email:emailEle.value
+    }
+
+    localStorage.setItem("formData",JSON.stringify(payload));
+})
+
+document.addEventListener("DOMContentLoaded",()=>{
+    const stringPaload=localStorage.getItem("formData");
+    const payload=JSON.parse(stringPaload);
+    const {name,email}=payload;
+
+    nameEle.value=name;
+    emailEle.value=email;
+
 })
