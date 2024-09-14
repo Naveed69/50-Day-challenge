@@ -98,6 +98,10 @@ emailEle.addEventListener("blur",(event)=>{
     // emailValidation.innerHTML="enter correct mail";
 })
 
+
+
+//------Local Storage--------
+
 window.addEventListener("beforeunload",(event)=>{
     const payload={
         name:nameEle.value,
