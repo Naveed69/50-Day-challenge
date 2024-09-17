@@ -54,7 +54,7 @@ label{
     background-color:blue;
     border-radius:4px;
     margin:10px;
-
+    transform: translate(0.5s);
 }
 
 .btn:hover{
