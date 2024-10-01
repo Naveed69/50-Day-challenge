@@ -119,3 +119,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     emailEle.value=email;
 
 })
+
+const person={
+    name:"naveed"
+}
