@@ -122,5 +122,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 const person={
     name:"naveed",
-    age:26
+    age:26,
+    run:function(){
+        length.log(this);
+    }
 }
+
