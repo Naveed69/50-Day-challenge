@@ -121,5 +121,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 })
 
 const person={
-    name:"naveed"
+    name:"naveed",
+    age:26
 }
