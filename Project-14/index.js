@@ -5,6 +5,8 @@ function Car(color, brand, fuelType) {
     this.engineStart = function () {
       console.log(`Car ${this.color} ${this.brand} started`);
     };
+    return engineStart;
   }
   
-  const bmwObj = new Car("black", "BMW", "Petrol");
+  const bmwObj =Car("black", "BMW", "Petrol");
+  console.log(bmwObj)
