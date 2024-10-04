@@ -8,5 +8,5 @@ function Car(color, brand, fuelType) {
     return engineStart;
   }
   
-  const bmwObj =Car("black", "BMW", "Petrol");
+  const bmwObj =new Car("black", "BMW", "Petrol");
   console.log(bmwObj);
