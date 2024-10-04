@@ -9,4 +9,4 @@ function Car(color, brand, fuelType) {
   }
   
   const bmwObj =Car("black", "BMW", "Petrol");
-  console.log(bmwObj)
+  console.log(bmwObj);
