@@ -32,5 +32,5 @@
 
 let res="hello"
 let re="hi";
-// res=res+re;
+res=res+re;
 console.log(res);
