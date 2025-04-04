@@ -1,0 +1,104 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+}
+.main {
+  height: 60vh;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  background-color: white;
+  /* overflow: hidden;
+    position: relative; */
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.left,
+.right {
+  width: 50%;
+  max-height: 100%;
+}
+.left {
+  color: white;
+  border-radius: 10px;
+  background: linear-gradient(to top, #0000ff, #8877e9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.score,
+.conclusio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score {
+  background-color: #5340be;
+  border-radius: 50%;
+  width: 50%;
+  height: 40vh;
+}
+
+.right {
+  padding: 20px;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.memory,
+.verbal,
+.visual,
+.reaction {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.reaction {
+  background-color: rgb(240, 191, 198);
+}
+
+.memory {
+  background-color: rgb(253, 206, 214);
+}
+
+.verbal {
+  background-color: rgb(200, 243, 200);
+}
+
+.visual {
+  background-color: #b8b8fdfd;
+}
+
+.btn {
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  margin: 10px;
+  background-color: rgb(28, 26, 138);
+  color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+  outline: none;
+}
