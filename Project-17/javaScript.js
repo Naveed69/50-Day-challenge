@@ -72,7 +72,6 @@ function errorHandle() {
   let ageYears = today.getFullYear() - year;
   let ageMonths = today.getMonth() - month;
   let ageDays = Math.abs(today.getDate() - day);
-  console.log(ageDays, "-", ageMonths, "-", ageYears);
 
   yearOut.innerText = ageYears;
   monthOut.innerText = ageMonths;
