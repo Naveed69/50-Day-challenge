@@ -1,0 +1,82 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.content {
+  background-color: rgb(232, 240, 247);
+  width: 750px;
+  height: 70%;
+  border-radius: 25px;
+  border-bottom-right-radius: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.input {
+  display: flex;
+  padding: 15px;
+  color: red;
+  font-size: 14;
+}
+
+#inp {
+  margin: 20px;
+  font-size: 12;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#dayIn,
+#yearIn,
+#monthIn {
+  padding: 10px;
+  width: 80px;
+  color: rgb(80, 79, 79);
+  font-weight: bolder;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+hr {
+  margin: 40px;
+  border: none;
+  height: 1px;
+  background-color: rgb(197, 192, 192);
+  width: 70%;
+}
+
+#calculateBtn {
+  color: white;
+  background-color: purple;
+  border: none;
+  border-radius: 50%;
+  font-size: 45px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 70%;
+  bottom: 70px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 300px;
+    border-bottom-right-radius: 100px;
+  }
+  #inp {
+    margin: 5px;
+  }
+  hr {
+    margin: 20px;
+    width: 80%;
+  }
+  #calculateBtn {
+    position: relative;
+    left: 40%;
+    bottom: 50px;
+  }
+}

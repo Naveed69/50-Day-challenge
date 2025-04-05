@@ -1,11 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+  <head>
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="input">
+        <label id="inp"
+          >Day<br />
+          <input type="text" maxlength="2" id="dayIn" placeholder="DD" />
+        </label>
+        <label id="inp"
+          >Month<br />
+          <input type="text" maxlength="2" id="monthIn" placeholder="MM" />
+        </label>
+        <label id="inp"
+          >Year<br />
+          <input type="text" maxlength="4" id="yearIn" placeholder="YYYY" />
+        </label>
+      </div>
+      <hr />
+      <button type="button" id="calculateBtn">&#8509;</button>
+      <div id="output"><span>--</span><label>Years</label></div>
+      <p class="error"></p>
+    </div>
+  </body>
 </html>
