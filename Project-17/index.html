@@ -9,20 +9,36 @@
         <label id="inp"
           >Day<br />
           <input type="text" maxlength="2" id="dayIn" placeholder="DD" />
+          <div class="error" id="dayError"></div>
         </label>
         <label id="inp"
           >Month<br />
           <input type="text" maxlength="2" id="monthIn" placeholder="MM" />
+          <div class="error" id="monthError"></div>
         </label>
         <label id="inp"
           >Year<br />
           <input type="text" maxlength="4" id="yearIn" placeholder="YYYY" />
+          <div class="error" id="yearError"></div>
         </label>
       </div>
       <hr />
       <button type="button" id="calculateBtn">&#8509;</button>
-      <div id="output"><span>--</span><label>Years</label></div>
-      <p class="error"></p>
+      <div id="output">
+        <span
+          ><span id="yearOut">--</span
+          ><label style="color: black"> years</label></span
+        >
+        <span
+          ><span id="monthOut">--</span
+          ><label style="color: black"> months</label></span
+        >
+        <span
+          ><span id="dayOut">--</span
+          ><label style="color: black"> days</label></span
+        >
+      </div>
     </div>
+    <script src="./javaScript.js"></script>
   </body>
 </html>
