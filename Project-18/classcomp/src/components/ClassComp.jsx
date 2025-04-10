@@ -7,18 +7,18 @@ export class ClassComp extends Component {
       count: 0,
     };
   }
-  handleincrement = () => {
+  handleIncrement = () => {
     this.setState({ count: this.state.count + 1 });
   };
   handleDecrement = () => {
-    this.setState({ count: this.state.count - 1 });
+    this.setState({count:this.state.count-1})
   };
   render() {
     return (
       <>
         <h1>Counter App</h1>
         <p>Count: {this.state.count}</p>
-        <button type="button" onClick={this.handleincrement}>
+        <button type="button" onClick={this.handleIncrement}>
           Increment
         </button>
         <button type="button" onClick={this.handleDecrement}>
