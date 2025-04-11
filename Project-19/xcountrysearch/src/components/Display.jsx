@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./styles.module.css";
+import "./styles.css";
 const Display = () => {
   const [countires, setCountries] = useState([]);
   const [filterCountires, setFilterCountires] = useState([]);
@@ -31,7 +31,7 @@ const Display = () => {
     );
   };
   return (
-    <div className={styles.main}>
+    <div className="main">
       <input
         type="text"
         placeholder="Search for Couuntry"
@@ -45,7 +45,7 @@ const Display = () => {
             {filterCountires.map((country) => {
               i++;
               return (
-                <div key={i} className={styles.countryCards}>
+                <div key={i} className="countryCards">
                   <img src={country.png} alt={country.comman} />
                   <p>{country.common}</p>
                 </div>

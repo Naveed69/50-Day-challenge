@@ -12,7 +12,7 @@ input {
   align-items: center;
   justify-items: center;
 }
-.container {
+.countryCard {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
