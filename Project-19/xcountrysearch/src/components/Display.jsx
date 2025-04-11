@@ -37,7 +37,7 @@ const Display = () => {
     filter();
   }, [search]);
   return (
-    <div className="main">
+    <>
       <input
         type="text"
         placeholder="Search for Couuntry"
@@ -56,7 +56,7 @@ const Display = () => {
           );
         })}
       </div>
-    </div>
+    </>
   );
 };
 export default Display;
