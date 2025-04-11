@@ -39,7 +39,7 @@ const Display = () => {
         onChange={handleChange}
       ></input>
       <hr />
-      <div className={styles.countryCard}>
+      <div className="countryCard">
         {filterCountires.length > 0 ? (
           <>
             {filterCountires.map((country) => {
