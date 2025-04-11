@@ -48,14 +48,12 @@ const Display = () => {
 
       {filterCountires.length > 0 && (
         <div className="countryCard">
-          {filterCountires.map((country) => {
-            return (
-              <div key={country.common} className="card">
-                <img src={country.png} alt={country.common} />
-                <p>{country.common}</p>
-              </div>
-            );
-          })}
+          {filterCountires.map((country) => (
+            <div key={country.common} className="card">
+              <img src={country.png} alt={country.common} />
+              <p>{country.common}</p>
+            </div>
+          ))}
         </div>
       )}
     </>
