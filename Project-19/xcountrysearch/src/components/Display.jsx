@@ -49,7 +49,7 @@ const Display = () => {
         {filterCountires.map((country) => {
           i++;
           return (
-            <div key={i} className="countryCards">
+            <div key={i} className="card">
               <img src={country.png} alt={country.common} />
               <p>{country.common}</p>
             </div>
