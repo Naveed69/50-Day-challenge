@@ -50,7 +50,7 @@ const Display = () => {
           i++;
           return (
             <div key={i} className="countryCards">
-              <img src={country.png} alt={country.comman} />
+              <img src={country.png} alt={country.common} />
               <p>{country.common}</p>
             </div>
           );
