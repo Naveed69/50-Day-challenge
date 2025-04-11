@@ -40,21 +40,15 @@ const Display = () => {
       ></input>
       <hr />
       <div className="countryCard">
-        {filterCountires.length > 0 ? (
-          <>
-            {filterCountires.map((country) => {
-              i++;
-              return (
-                <div key={i} className="countryCards">
-                  <img src={country.png} alt={country.comman} />
-                  <p>{country.common}</p>
-                </div>
-              );
-            })}
-          </>
-        ) : (
-          <></>
-        )}
+        {filterCountires.map((country) => {
+          i++;
+          return (
+            <div key={i} className="countryCards">
+              <img src={country.png} alt={country.comman} />
+              <p>{country.common}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
