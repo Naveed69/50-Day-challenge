@@ -27,11 +27,14 @@ const Display = () => {
     setSearch(se);
   };
   useEffect(() => {
-    setFilterCountires(
-      countires.filter((country) => {
-        return country.common.toLowerCase().includes(search.toLowerCase());
-      })
-    );
+    const filter = () => {
+      setFilterCountires(
+        countires.filter((country) => {
+          return country.common.toLowerCase().includes(search.toLowerCase());
+        })
+      );
+    };
+    filter();
   }, [search]);
   return (
     <div className="main">
