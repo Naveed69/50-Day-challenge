@@ -46,16 +46,13 @@ const Display = () => {
       ></input>
       <hr />
 
-      {filterCountires.length > 0 && (
-        <div className="countryCard">
-          {filterCountires.map((country) => (
-            <div key={country.common} className="card">
-              <img src={country.png} alt={country.common} />
-              <p>{country.common}</p>
-            </div>
-          ))}
-        </div>
-      )}
+      {filterCountires.length > 0 &&
+        filterCountires.map((country) => (
+          <div key={country.common} className="card">
+            <img src={country.png} alt={country.common} />
+            <p>{country.common}</p>
+          </div>
+        ))}
     </>
   );
 };
