@@ -39,20 +39,18 @@ const Display = () => {
         onChange={handleChange}
       ></input>
       <hr />
-      <div className={styles.container}>
+      <div className={styles.countryCard}>
         {filterCountires.length > 0 ? (
           <>
-            <div className={styles.countryCard}>
-              {filterCountires.map((country) => {
-                i++;
-                return (
-                  <div key={i} className={styles.countryCards}>
-                    <img src={country.png} alt={country.comman} />
-                    <p>{country.common}</p>
-                  </div>
-                );
-              })}
-            </div>
+            {filterCountires.map((country) => {
+              i++;
+              return (
+                <div key={i} className={styles.countryCards}>
+                  <img src={country.png} alt={country.comman} />
+                  <p>{country.common}</p>
+                </div>
+              );
+            })}
           </>
         ) : (
           <></>
