@@ -45,19 +45,19 @@ const Display = () => {
         onChange={handleChange}
       ></input>
       <hr />
-      <div className="countryCard">
-        <div className="card">
+
+      {filterCountires.length > 0 && (
+        <div className="countryCard">
           {filterCountires.map((country) => {
-            i++;
             return (
-              <div key={country.common}>
+              <div key={country.common} className="card">
                 <img src={country.png} alt={country.common} />
                 <p>{country.common}</p>
               </div>
             );
           })}
         </div>
-      </div>
+      )}
     </>
   );
 };
