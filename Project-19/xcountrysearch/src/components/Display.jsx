@@ -48,7 +48,7 @@ const Display = () => {
 
       {filterCountires.length > 0 &&
         filterCountires.map((country) => (
-          <div key={country.common} className="card">
+          <div key={country.common} className="countryCard">
             <img src={country.png} alt={country.common} />
             <p>{country.common}</p>
           </div>
