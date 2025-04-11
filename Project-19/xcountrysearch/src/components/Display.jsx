@@ -42,15 +42,17 @@ const Display = () => {
       <div className={styles.container}>
         {filterCountires.length > 0 ? (
           <>
-            {filterCountires.map((country) => {
-              i++;
-              return (
-                <div key={i} className={styles.countryCard}>
-                  <img src={country.png} alt={country.comman} />
-                  <p>{country.common}</p>
-                </div>
-              );
-            })}
+            <div className={styles.countryCard}>
+              {filterCountires.map((country) => {
+                i++;
+                return (
+                  <div key={i} className={styles.card}>
+                    <img src={country.png} alt={country.comman} />
+                    <p>{country.common}</p>
+                  </div>
+                );
+              })}
+            </div>
           </>
         ) : (
           <></>
