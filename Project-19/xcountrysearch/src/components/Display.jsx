@@ -3,7 +3,7 @@ import "./styles.css";
 const Display = () => {
   const [countires, setCountries] = useState([]);
   const [filterCountires, setFilterCountires] = useState([]);
-  let search = "";
+  const [search, setSearch] = useState("");
   let i = 0;
   useEffect(() => {
     const fetchApi = async () => {
@@ -23,13 +23,16 @@ const Display = () => {
   }, []);
   const handleChange = (e) => {
     e.preventDefault();
-    search = e.target.value;
+    let se = e.target.value;
+    setSearch(se);
+  };
+  useEffect(() => {
     setFilterCountires(
       countires.filter((country) => {
         return country.common.toLowerCase().includes(search.toLowerCase());
       })
     );
-  };
+  }, [search]);
   return (
     <div className="main">
       <input
