@@ -46,7 +46,7 @@ const Display = () => {
               {filterCountires.map((country) => {
                 i++;
                 return (
-                  <div key={i} className={styles.card}>
+                  <div key={i} className={styles.countryCards}>
                     <img src={country.png} alt={country.comman} />
                     <p>{country.common}</p>
                   </div>
