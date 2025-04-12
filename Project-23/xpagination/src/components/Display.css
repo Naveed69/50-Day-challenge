@@ -1,0 +1,41 @@
+.pageNo {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(19, 155, 155);
+  margin: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+tr {
+  background-color: #f1f1f1;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  background-color: rgb(19, 155, 155);
+  border-radius: 5px;
+  width: 100px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+th {
+  background-color: rgb(19, 155, 155);
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+tr:hover {
+  background-color: rgb(179, 206, 206);
+}
+body {
+  text-align: center;
+}
