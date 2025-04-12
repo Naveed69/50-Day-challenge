@@ -43,6 +43,7 @@ const Display = () => {
               <input
                 type="text"
                 name="username"
+                id="username"
                 placeholder="Enter Name"
                 value={username}
                 onChange={(e) => setusername(e.target.value)}
@@ -52,6 +53,7 @@ const Display = () => {
               <input
                 type="email"
                 name="email"
+                id="email"
                 placeholder="Enter email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -61,6 +63,7 @@ const Display = () => {
               <input
                 type="tel"
                 name="phone"
+                id="phone"
                 placeholder="Enter Phone"
                 required
                 value={phone}
@@ -70,11 +73,14 @@ const Display = () => {
               <input
                 type="date"
                 name="date"
+                id="dob"
                 onChange={(e) => setBirthDate(e.target.value)}
                 value={birthDate}
                 required
               />
-              <button type="submit">Submit</button>
+              <button type="submit" className="submit-button">
+                Submit
+              </button>
             </form>
           </div>
         </div>
