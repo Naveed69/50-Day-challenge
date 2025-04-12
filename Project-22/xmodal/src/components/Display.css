@@ -6,6 +6,7 @@ button {
   border-radius: 5px;
   width: 150px;
   font-size: 1rem;
+  margin: 20px;
 }
 
 .modal {
@@ -27,6 +28,25 @@ button {
   border-radius: 8px;
   width: 600px;
   text-align: center;
-  top: 20%;
+  top: auto;
   position: absolute;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(128, 124, 124);
+  width: 70%;
+  margin-top: -5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
 }
