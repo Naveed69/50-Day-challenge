@@ -22,7 +22,7 @@ const Display = () => {
         placeholder="Enter text.."
         onChange={(e) => setSentance(e.target.value)}
       />
-      {correctWord && <p>Did you mean: {correctWord}</p>}
+      {correctWord && <p>Did you mean: {correctWord}?</p>}
     </>
   );
 };
