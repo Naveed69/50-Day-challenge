@@ -13,7 +13,11 @@ const Display = () => {
   useEffect(() => {
     let words = sentance.split(" ");
     let correctword = words.find((w) => customDictionary[w.toLowerCase()]);
-    setCorrectWord(customDictionary[correctword]);
+    if (correctword) {
+      setCorrectWord(customDictionary[correctword.toLocaleLowerCase()]);
+    } else {
+      setCorrectWord("");
+    }
   }, [sentance]);
   return (
     <>
