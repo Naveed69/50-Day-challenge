@@ -13,7 +13,7 @@ const Display = () => {
         const jsonData = await response.json();
         setableData(jsonData);
       } catch (e) {
-        console.error(e);
+        alert("failed to fetch data");
       }
     };
 
