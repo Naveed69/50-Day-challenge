@@ -65,8 +65,12 @@ const Display = () => {
         <option disabled value="">
           --Select Country--
         </option>
-        {countrys.map((c) => {
-          return <option key={c}>{c}</option>;
+        {countrys.map((c, idx) => {
+          return (
+            <option key={idx} value={c}>
+              {c}
+            </option>
+          );
         })}
       </select>
       <select
@@ -77,8 +81,12 @@ const Display = () => {
         <option disabled value="">
           --Select State--
         </option>
-        {states.map((s) => {
-          return <option key={s}>{s}</option>;
+        {states.map((s, idx) => {
+          return (
+            <option key={idx} value={s}>
+              {s}
+            </option>
+          );
         })}
       </select>
       <select
@@ -89,8 +97,12 @@ const Display = () => {
         <option disabled value="">
           --Select City--
         </option>
-        {cityNames.map((c) => {
-          return <option key={c}>{c}</option>;
+        {cityNames.map((c, idx) => {
+          return (
+            <option key={idx} value={c}>
+              {c}
+            </option>
+          );
         })}
       </select>
       {cityName && (
