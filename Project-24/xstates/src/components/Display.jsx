@@ -70,7 +70,7 @@ const Display = () => {
         })}
       </select>
       <select
-        disabled={!countryName}
+        // disabled={!countryName}
         value={stateName}
         onChange={(e) => setStateName(e.target.value)}
       >
@@ -84,7 +84,7 @@ const Display = () => {
       <select
         value={cityName}
         onChange={(e) => setCityName(e.target.value)}
-        disabled={!stateName}
+        // disabled={!stateName}
       >
         <option disabled value="">
           --Select City--
