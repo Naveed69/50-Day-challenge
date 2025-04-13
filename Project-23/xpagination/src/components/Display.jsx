@@ -3,7 +3,7 @@ import "./Display.css";
 const Display = () => {
   const [tableData, setableData] = useState([]);
   const [filterTable, setFilterTable] = useState([]);
-  const [pageno, setPageno] = useState(1);
+  const [pageno, setPageno] = useState(0);
   useEffect(() => {
     const fetchApi = async () => {
       try {
@@ -23,26 +23,26 @@ const Display = () => {
     setFilterTable(tableData.slice(0, 10));
   }, [tableData]);
 
+  useEffect(() => {
+    let start = pageno * 10;
+    let end = start + 10;
+    setFilterTable(tableData.slice(start, end));
+  }, [pageno]);
+
   const handleNext = () => {
-    const nextpage = Math.ceil(tableData.length / 10);
-    if (pageno === nextpage) {
+    const endpage = Math.ceil(tableData.length / 10);
+    if (pageno === endpage - 1) {
       return;
     } else {
-      let start = pageno * 10;
-      let end = start + 10;
-      setFilterTable(tableData.slice(start, end));
       setPageno(pageno + 1);
     }
   };
 
   const handlePrev = () => {
-    if (pageno === 1) {
+    if (pageno <= 0) {
       return;
     } else {
       setPageno(pageno - 1);
-      let start = pageno * 10 - 10;
-      let end = start + 10;
-      setFilterTable(tableData.slice(start, end));
     }
   };
   return (
@@ -73,7 +73,7 @@ const Display = () => {
       <button type="button" onClick={handlePrev}>
         Previous
       </button>
-      <span className="pageNo">{pageno}</span>
+      <span className="pageNo">{pageno + 1}</span>
       <button type="button" onClick={handleNext}>
         Next
       </button>
