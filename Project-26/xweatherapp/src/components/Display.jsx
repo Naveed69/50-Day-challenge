@@ -39,25 +39,18 @@ const Display = () => {
         <input type="text" placeholder="Enter City" name="city" required />
         <button type="submit">Search</button>
       </form>
-      {city && weather ? (
-        loading ? (
-          <p style={{ fontSize: "26px", color: "rgb(100, 97, 97)" }}>
-            Loading data...
-          </p>
-        ) : (
-          <div className="weather-cards">
-            <Card title="Temperature" value={`${weather.current.temp_c}°C`} />
-            <Card title="Humidity" value={`${weather.current.humidity}%`} />
-            <Card
-              title="Condition"
-              value={`${weather.current.condition.text}`}
-            />
-            <Card
-              title="Wind Speed"
-              value={`${weather.current.wind_kph} kph`}
-            />
-          </div>
-        )
+
+      {loading ? (
+        <p style={{ fontSize: "26px", color: "rgb(100, 97, 97)" }}>
+          Loading data...
+        </p>
+      ) : city && weather ? (
+        <div className="weather-cards">
+          <Card title="Temperature" value={`${weather.current.temp_c}°C`} />
+          <Card title="Humidity" value={`${weather.current.humidity}%`} />
+          <Card title="Condition" value={`${weather.current.condition.text}`} />
+          <Card title="Wind Speed" value={`${weather.current.wind_kph} kph`} />
+        </div>
       ) : (
         <></>
       )}
