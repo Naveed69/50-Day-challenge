@@ -42,7 +42,7 @@ const Display = () => {
       {city && weather ? (
         loading ? (
           <p style={{ fontSize: "26px", color: "rgb(100, 97, 97)" }}>
-            Loading data…
+            Loading data...
           </p>
         ) : (
           <div className="weather-cards">
