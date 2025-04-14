@@ -3,10 +3,11 @@ import axios from "axios";
 import "./Display.css";
 import Card from "./Card/Card";
 const Display = () => {
-  const [weather, setWeather] = useState([]);
+  const [weather, setWeather] = useState(null);
   const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
   useEffect(() => {
+    if (!city) return;
     setLoading(true);
     const fetchApi = () => {
       axios
@@ -38,9 +39,9 @@ const Display = () => {
         <input type="text" placeholder="Enter City" name="city" required />
         <button type="submit">Search</button>
       </form>
-      {city !== "" ? (
+      {city && weather ? (
         loading ? (
-          <p style={{ fontsize: "26px", color: "rgb(100, 97, 97)" }}>
+          <p style={{ fontSize: "26px", color: "rgb(100, 97, 97)" }}>
             Loading data…
           </p>
         ) : (
