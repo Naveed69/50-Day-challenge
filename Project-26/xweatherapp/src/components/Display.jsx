@@ -17,17 +17,16 @@ const Display = () => {
           },
         })
         .then((response) => {
-          console.log(response.data);
           setWeather(response.data);
           setLoading(false);
         })
         .catch((e) => {
+          setLoading(false);
+          setCity("");
           alert("Failed to fetch weather data");
         });
     };
     fetchApi();
-
-    console.log(weather);
   }, [city]);
 
   const handleSearch = (e) => {
