@@ -16,3 +16,7 @@
 .title {
   font-weight: bolder;
 }
+
+p {
+  margin: 0px;
+}
