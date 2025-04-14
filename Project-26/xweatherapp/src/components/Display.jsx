@@ -21,8 +21,6 @@ const Display = () => {
           setLoading(false);
         })
         .catch((e) => {
-          // setLoading(false);
-          setCity("");
           alert("Failed to fetch weather data");
         });
     };
