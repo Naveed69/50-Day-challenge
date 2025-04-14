@@ -21,7 +21,7 @@ const Display = () => {
           setLoading(false);
         })
         .catch((e) => {
-          setLoading(false);
+          // setLoading(false);
           setCity("");
           alert("Failed to fetch weather data");
         });
@@ -40,7 +40,7 @@ const Display = () => {
         <input type="text" placeholder="Enter City" name="city" required />
         <button type="submit">Search</button>
       </form>
-      {city ? (
+      {city !== "" ? (
         loading ? (
           <p style={{ fontsize: "26px", color: "rgb(100, 97, 97)" }}>
             Loading data…
