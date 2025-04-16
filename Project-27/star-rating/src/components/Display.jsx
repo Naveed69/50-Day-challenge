@@ -7,61 +7,58 @@ const Display = () => {
     { id: 3, name: "Fitness Tracker", rating: 2 },
   ]);
 
-  const handleChange = (updtedStar, productId) => {
-    const newproducts = productData.map((product) =>
-      product.id === productId ? { ...product, rating: updtedStar } : product
+  const handleRating = (newRating, productId) => {
+    const newData = productData.map((product) =>
+      product.id === productId ? { ...product, rating: newRating } : product
     );
-    setProductData(newproducts);
+    setProductData(newData);
   };
 
   return (
-    <>
-      <div className="container">
-        <h1>Rating Table</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Name</th>
-              <th>Rating</th>
+    <div className="container">
+      <h1>Rating App</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {productData.map((product) => (
+            <tr key={product.id}>
+              <td>{product.id}</td>
+              <td>{product.name}</td>
+              <td key={product.id}>
+                {[1, 2, 3, 4, 5].map((rating) => {
+                  if (product.rating >= rating) {
+                    return (
+                      <span
+                        key={rating}
+                        className="filled"
+                        onClick={() => handleRating(rating, product.id)}
+                      >
+                        &#9733;
+                      </span>
+                    );
+                  } else {
+                    return (
+                      <span
+                        className="notFilled"
+                        onClick={() => handleRating(rating, product.id)}
+                      >
+                        &#9734;
+                      </span>
+                    );
+                  }
+                }) }
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {productData.map((p) => {
-              return (
-                <tr key={p.id}>
-                  <td>{p.id}</td>
-                  <td>{p.name}</td>
-                  <td>
-                    {[1, 2, 3, 4, 5].map((noStar) =>
-                      noStar <= p.rating ? (
-                        <span
-                          key={noStar}
-                          className="filled"
-                          style={{ fontSize: "26px" }}
-                          onClick={() => handleChange(noStar, p.id)}
-                        >
-                          &#9733;
-                        </span>
-                      ) : (
-                        <span
-                          key={noStar}
-                          className="notFilled"
-                          style={{ fontSize: "26px" }}
-                          onClick={() => handleChange(noStar, p.id)}
-                        >
-                          &#9734;
-                        </span>
-                      )
-                    )}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    </>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 export default Display;

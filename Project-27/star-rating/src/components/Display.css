@@ -1,37 +1,43 @@
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  margin-top: 6%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  text-align: left;
 }
 
 th {
-  background-color: #4caf50;
-  color: white;
-}
-table {
-  border-collapse: collapse;
-  background-color: #fff;
-  width: 70%;
+  background-color: rgb(21, 154, 158);
+  color: aliceblue;
 }
 
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid rgb(218, 209, 209);
+td,
+th {
+  padding: 10px 20px;
+}
+
+tr {
+  border-bottom: 1px solid rgb(219, 214, 214);
 }
 
 tr:hover {
-  background-color: rgb(209, 218, 226);
+  background-color: antiquewhite;
 }
 
 .filled {
   color: gold;
-  cursor: pointer;
 }
 
 .notFilled {
-  color: black;
+  color: rgb(126, 123, 123);
+}
+.filled,
+.notFilled {
+  font-size: 26px;
   cursor: pointer;
 }
