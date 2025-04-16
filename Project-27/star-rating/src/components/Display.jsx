@@ -52,7 +52,11 @@ const Display = () => {
                       </span>
                     );
                   }
-                }) }
+                })}
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <spam style={{ fontSize: "14px", color: "rgb(80, 77, 77)" }}>
+                  ({product.rating} out of 5)
+                </spam>
               </td>
             </tr>
           ))}
