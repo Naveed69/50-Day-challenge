@@ -7,7 +7,6 @@ const Card = ({ task, setList, list }) => {
     setEditValue(task.task);
     setModal(true);
   };
-
   const handleDelete = (e) => {
     setList(
       [...list].filter((a) => {
