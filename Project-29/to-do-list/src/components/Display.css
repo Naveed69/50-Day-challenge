@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: rgb(77, 77, 240);
+  width: 50vw;
+  height: 80vh;
+  margin: 10vh;
+  color: white;
+}
+
+input {
+  padding: 5px;
+  border: 1px solid rgb(141, 137, 137);
+  border-radius: 5px;
+}
+
+button {
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(42, 161, 122);
+  width: 80px;
+  margin: 5px;
+  color: white;
+}
+
+hr {
+  width: 80%;
+}
