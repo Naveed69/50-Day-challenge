@@ -1,3 +1,4 @@
+//npm install react-router-dom
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
@@ -23,7 +24,7 @@ const Display = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        
+
       </div>
     </Router>
   );
