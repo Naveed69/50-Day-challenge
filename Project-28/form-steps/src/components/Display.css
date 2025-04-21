@@ -16,6 +16,20 @@ body {
 }
 
 .btn {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+button {
+  padding: 5px;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(65, 151, 123);
+}
+
+.selected {
+  border-color: blue;
 }

@@ -1,8 +1,9 @@
 import "./Card.css";
-const Card = () => {
+const Card = ({ page }) => {
   return (
     <div className="card">
-      <h1>Card</h1>
+      <span>{page.step}</span>
+      <span>{page.about}</span>
     </div>
   );
 };

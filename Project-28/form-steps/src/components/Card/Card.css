@@ -4,4 +4,10 @@
   border: 1px solid rgb(163, 153, 153);
   border-radius: 10px;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+span {
+  margin-top: 10px;
 }
