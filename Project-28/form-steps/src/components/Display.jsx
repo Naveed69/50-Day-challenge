@@ -6,15 +6,15 @@ const Display = () => {
     border: "1px solid blue",
   };
   const pages = [
-    { step: "Step1", about: "Fill user Details" },
-    { step: "Step2", about: "Fill College Details" },
-    { step: "Step3", about: "Fill Experience Details" },
-    { step: "Step4", about: "Validate Details" },
+    { step: 1, about: "Fill user Details" },
+    { step: 2, about: "Fill College Details" },
+    { step: 3, about: "Fill Experience Details" },
+    { step: 4, about: "Validate Details" },
   ];
   const [pageNo, setPageNo] = useState(1);
 
   const handleNext = () => {
-    if (pageNo >= 4) return;
+    if (pageNo >= 5) return;
     setPageNo(pageNo + 1);
   };
 
@@ -26,16 +26,17 @@ const Display = () => {
     <div className="container">
       <h1>Form Steps</h1>
       {pages.map((page) => (
-        <Card page={page} style={cardStyle} />
+        <Card key={page.step} page={page} pageNo={pageNo} />
       ))}
-      {pageNo >= 5 ? <p>Completed</p> : null}
+      {pageNo >= 5 ? (
+        <p style={{ color: "green", fontWeight: "bolder" }}>Form Submitted</p>
+      ) : null}
       <div className="btn">
         <button type="button" onClick={handlePrev} disabled={pageNo === 1}>
           Previous
         </button>
-        <button type="button" onClick={handleNext} disabled={pageNo === 4}>
-          {" "}
-          Next
+        <button type="button" onClick={handleNext} disabled={pageNo === 5}>
+          {pageNo >= 4 ? "Finish" : "Next"}
         </button>
       </div>
     </div>
