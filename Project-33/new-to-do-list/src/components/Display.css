@@ -29,7 +29,7 @@ button {
   padding: 7px;
   border: none;
   background-color: rgb(68, 148, 148);
-  color: white;
+  /* color: white; */
   border-radius: 5px;
   margin-left: 10px;
   width: 70px;
@@ -45,10 +45,14 @@ button {
 }
 
 .tasklist {
-  background-color: rgb(68, 148, 148);
+  background-color: rgb(201, 189, 189);
   width: 80%;
   height: 60%;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
 }
 
 .btn {

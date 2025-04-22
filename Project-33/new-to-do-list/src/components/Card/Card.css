@@ -1,0 +1,27 @@
+.card {
+  width: 80%;
+  border: 1px solid rgb(121, 117, 117);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+  background-color: rgb(68, 148, 148);
+  color: rgb(201, 189, 189);
+  padding: 10px;
+}
+
+.edit,
+.delete {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.edit {
+  color: rgb(52, 212, 52);
+  font-size: 18px;
+}
+
+.delete {
+  color: red;
+}
