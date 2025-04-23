@@ -73,7 +73,7 @@ button {
   .container {
     background-color: aliceblue;
     width: 90vw;
-    height: 90vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     padding: 10px;
