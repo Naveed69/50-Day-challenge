@@ -69,7 +69,7 @@ button {
   margin-right: -1px;
 }
 
-@media (width<768px) {
+@media (width<=768px) {
   .container {
     background-color: aliceblue;
     width: 90vw;
