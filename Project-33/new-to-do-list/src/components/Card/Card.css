@@ -9,6 +9,7 @@
   background-color: rgb(68, 148, 148);
   color: white;
   padding: 10px;
+  flex-wrap: wrap;
 }
 
 .completedSymbol {
@@ -44,4 +45,10 @@
   flex-direction: column;
   align-items: center;
   color: black;
+}
+
+@media (width<768) {
+  input {
+    max-width: 40%;
+  }
 }
