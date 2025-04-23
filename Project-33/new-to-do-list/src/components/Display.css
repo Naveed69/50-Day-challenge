@@ -70,6 +70,15 @@ button {
 }
 
 @media (width<768px) {
+  .container {
+    background-color: aliceblue;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+  }
   .select {
     position: relative;
     left: 15%;
