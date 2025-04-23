@@ -1,10 +1,16 @@
 import { useState } from "react";
 import "./Card.css";
-const Card = ({ task, tasks, setTasks }) => {
+const Card = ({
+  task,
+  tasks,
+  setTasks,
+  completedTasks,
+  setComepletedTasks,
+  completed,
+}) => {
   const [edit, setEdit] = useState(false);
   const [editedValue, setEditedValue] = useState("");
   const [modal, setModal] = useState(false);
-  const [completedTasks, setComepletedTasks] = useState([]);
 
   const handleEdit = () => {
     setEdit(true);
@@ -44,12 +50,12 @@ const Card = ({ task, tasks, setTasks }) => {
     const comepletedtask = [...tasks].filter((t) =>
       task.id === t.id ? t : null
     );
-    setComepletedTasks([...completedTasks, comepletedtask]);
+    setComepletedTasks([...completedTasks, ...comepletedtask]);
     const updatedList = [...tasks].filter((t) => (task.id !== t.id ? t : null));
     setTasks(updatedList);
   };
 
-  console.log(completedTasks);
+  console.log(tasks);
 
   return (
     <div className="card">
@@ -60,18 +66,37 @@ const Card = ({ task, tasks, setTasks }) => {
           onChange={(e) => setEditedValue(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSave()}
         />
-      ) : (
+      ) : !completed ? (
         <div>{task.task}</div>
+      ) : (
+        <div
+          style={{
+            textDecoration: "line-through",
+            textDecorationColor: "black",
+          }}
+        >
+          {task.task}
+        </div>
       )}
       {!edit ? (
         <span>
-          <span
-            className="completedSymbol"
-            title="Mark Completed"
-            onClick={handleComepleted}
-          >
-            &#10004;
-          </span>
+          {!completed ? (
+            <span
+              className="completedSymbol"
+              title="Mark Completed"
+              onClick={handleComepleted}
+            >
+              &#10004;
+            </span>
+          ) : (
+            <span
+              className="completedSymbol"
+              title="Mark Not Completed"
+              onClick={handleComepleted}
+            >
+              &#10149;
+            </span>
+          )}
           <span className="edit" title="Edit" onClick={handleEdit}>
             &#9998;
           </span>
