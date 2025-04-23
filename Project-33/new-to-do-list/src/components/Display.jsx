@@ -2,18 +2,7 @@ import { useEffect, useState } from "react";
 import "./Display.css";
 import Card from "./Card/Card";
 const Display = () => {
-  const [tasks, setTasks] = useState([
-    { id: 1, task: "1" },
-    { id: 2, task: "2" },
-    { id: 3, task: "3" },
-    { id: 4, task: "4" },
-    { id: 5, task: "5" },
-    { id: 6, task: "6" },
-    { id: 7, task: "7" },
-    { id: 8, task: "8" },
-    { id: 9, task: "9" },
-    { id: 10, task: "10" },
-  ]);
+  const [tasks, setTasks] = useState([]);
   const [ids, setIds] = useState(11);
   const [filteredTask, setFilteredTask] = useState([]);
 
