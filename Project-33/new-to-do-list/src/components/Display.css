@@ -82,9 +82,4 @@ button {
     position: relative;
     left: 15%;
   }
-  form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
