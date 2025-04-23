@@ -51,18 +51,12 @@ const Display = () => {
       </form>
       <hr />
       <select className="select">
-        <option>Non Completed Task</option>
+        <option>Not Completed Task</option>
         <option>Completed Task</option>
       </select>
       <div className="tasklist">
-        {filteredTask.map((task, idx) => (
-          <Card
-            key={idx}
-            id={idx}
-            task={task}
-            tasks={tasks}
-            setTasks={setTasks}
-          />
+        {filteredTask.map((task) => (
+          <Card key={task.id} task={task} tasks={tasks} setTasks={setTasks} />
         ))}
       </div>
       <span className="btn">
