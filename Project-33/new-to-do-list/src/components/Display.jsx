@@ -3,7 +3,7 @@ import "./Display.css";
 import Card from "./Card/Card";
 const Display = () => {
   const [tasks, setTasks] = useState([]);
-  const [ids, setIds] = useState(11);
+  const [ids, setIds] = useState(1);
   const [filteredTask, setFilteredTask] = useState([]);
 
   const [pageNo, setPageNo] = useState(1);
