@@ -11,6 +11,7 @@ const Card = ({
   const [edit, setEdit] = useState(false);
   const [editedValue, setEditedValue] = useState("");
   const [modal, setModal] = useState(false);
+  const [markComModal, setComModal] = useState(false);
 
   const handleEdit = () => {
     setEdit(true);
@@ -47,16 +48,20 @@ const Card = ({
   };
 
   const handleComepleted = () => {
+    setComModal(true);
+  };
+
+  console.log(tasks);
+
+  const handleComp = () => {
     const comepletedtask = [...tasks].filter((t) =>
       task.id === t.id ? t : null
     );
     setComepletedTasks([...completedTasks, ...comepletedtask]);
     const updatedList = [...tasks].filter((t) => (task.id !== t.id ? t : null));
     setTasks(updatedList);
+    setComModal(false);
   };
-
-  console.log(tasks);
-
   return (
     <div className="card">
       {edit ? (
@@ -81,13 +86,18 @@ const Card = ({
       {!edit ? (
         <span>
           {!completed ? (
-            <span
-              className="completedSymbol"
-              title="Mark Completed"
-              onClick={handleComepleted}
-            >
-              &#10004;
-            </span>
+            <>
+              <span
+                className="completedSymbol"
+                title="Mark Completed"
+                onClick={handleComepleted}
+              >
+                &#10004;
+              </span>
+              <span className="edit" title="Edit" onClick={handleEdit}>
+                &#9998;
+              </span>
+            </>
           ) : (
             <span
               className="completedSymbol"
@@ -97,9 +107,7 @@ const Card = ({
               &#10149;
             </span>
           )}
-          <span className="edit" title="Edit" onClick={handleEdit}>
-            &#9998;
-          </span>
+
           <span className="delete" title="Delete" onClick={handleDelete}>
             &#x274C;
           </span>
@@ -122,6 +130,24 @@ const Card = ({
           <span>
             <button onClick={deleteValue}>Yes</button>
             <button onClick={() => setModal(false)}>No</button>
+          </span>
+        </div>
+      )}
+
+      {markComModal && (
+        <div className="modal">
+          {!completed ? (
+            <p>
+              Mark as completed <strong>{task.task}</strong>?
+            </p>
+          ) : (
+            <p>
+              Mark as not completed <strong>{task.task}</strong>?
+            </p>
+          )}
+          <span>
+            <button onClick={handleComp}>Yes</button>
+            <button onClick={() => setComModal(false)}>No</button>
           </span>
         </div>
       )}
