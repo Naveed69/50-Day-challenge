@@ -51,8 +51,6 @@ const Card = ({
     setComModal(true);
   };
 
-  console.log(tasks);
-
   const handleComp = () => {
     const comepletedtask = [...tasks].filter((t) =>
       task.id === t.id ? t : null
@@ -138,11 +136,11 @@ const Card = ({
         <div className="modal">
           {!completed ? (
             <p>
-              Mark as completed <strong>{task.task}</strong>?
+              Mark <strong>{task.task}</strong> as completed ?
             </p>
           ) : (
             <p>
-              Mark as not completed <strong>{task.task}</strong>?
+              Mark <strong>{task.task}</strong> as not completed ?
             </p>
           )}
           <span>
