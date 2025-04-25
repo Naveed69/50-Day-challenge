@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Child from "./components/Child";
 
-function App() {
+import MyContext from "./context/MyContext";
+
+// Provide the context to your app
+const App = () => {
+  const [name] = useState("Naveed");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MyContext.Provider value={name}>
+      <Child />
+    </MyContext.Provider>
   );
-}
+};
 
 export default App;
