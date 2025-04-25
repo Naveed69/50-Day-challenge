@@ -3,6 +3,7 @@ import { createContext, useState } from "react";
 // Create the context
 const MyContext = createContext(null);
 
+export default MyContext;
 // context provider
 
 export const ContextProvider = (props) => {
@@ -11,5 +12,3 @@ export const ContextProvider = (props) => {
     <MyContext.Provider value={{ name }}>{props.children}</MyContext.Provider>
   );
 };
-
-export default MyContext;
