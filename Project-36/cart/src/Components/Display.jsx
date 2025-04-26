@@ -6,7 +6,7 @@ const Display = (props) => {
       <ul>
         {" "}
         <li>
-          {props.name} <p>Price: {props.price}</p>
+          {props.name} <p>Price: ${props.price}</p>
         </li>
       </ul>
       <button
