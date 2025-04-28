@@ -10,6 +10,7 @@ const Cart = () => {
           <li key={idx}>{item.item}</li>
         ))}
       </ul>
+      <hr />
       <h5>Total Price: ${total}</h5>
     </span>
   );
