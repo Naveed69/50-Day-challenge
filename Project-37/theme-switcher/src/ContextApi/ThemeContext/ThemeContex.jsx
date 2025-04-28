@@ -11,7 +11,7 @@ export const ThemeProvider = (props) => {
   );
 };
 
-export const UseContext = () => {
+export const UseTheme = () => {
   const theme = useContext(ThemeContext);
   return theme;
 };
