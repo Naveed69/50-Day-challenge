@@ -1,7 +1,6 @@
 import { UseCotext } from "../ContexApi/Cart/CartContext";
 const Cart = () => {
   const useCart = UseCotext();
-  console.log(useCart);
   const total = useCart.items.reduce((a, b) => a + b.price, 0);
   return (
     <span>
