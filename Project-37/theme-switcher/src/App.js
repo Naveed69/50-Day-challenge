@@ -1,31 +1,23 @@
 import "./App.css";
-import { DisplayTogller } from "./components/Display";
-import { ThemeProvider, UseTheme } from "./ContextApi/ThemeContext/ThemeContex";
-
-const Content = () => {
-  const { theme } = UseTheme();
+import { Display } from "./components/Display";
+import { UseThemeContext } from "./ContextApi/ThemeContext/ThemeContex";
+function App() {
+  const { theme } = UseThemeContext();
   return (
     <div
       style={{
-        backgroundColor: theme === "Light" ? "white" : "black",
+        background: theme === "Light" ? "white" : "black",
         color: theme === "Light" ? "black" : "white",
         minHeight: "100vh",
         display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
         justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
       }}
     >
-      <h1>{theme === "Light" ? "Light Theme" : "Dark Theme"} is Active</h1>
-      <DisplayTogller />
+      <h1>{theme === "Light" ? "Light" : "Dark"} Theme is Active</h1>
+      <Display />
     </div>
-  );
-};
-function App() {
-  return (
-    <ThemeProvider>
-      <Content />
-    </ThemeProvider>
   );
 }
 

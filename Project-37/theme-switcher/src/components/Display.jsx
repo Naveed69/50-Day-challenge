@@ -1,28 +1,20 @@
-import { UseTheme } from "../ContextApi/ThemeContext/ThemeContex";
-const DisplayTogller = () => {
-  const useTheme = UseTheme();
-  const toggalTheme = () => {
-    useTheme.setTheme(useTheme.theme === "Light" ? "Dark" : "Light");
-  };
+import { UseThemeContext } from "../ContextApi/ThemeContext/ThemeContex";
+
+export const Display = () => {
+  const { theme, setTheme } = UseThemeContext();
   return (
-    <>
-      <button
-        type="button"
-        onClick={toggalTheme}
-        style={{
-          padding: "10px 20px",
-          margin: "20px",
-          cursor: "pointer",
-          backgroundColor: useTheme.theme === "Light" ? "black" : "white",
-          color: useTheme.theme === "Light" ? "white" : "black",
-          border: "none",
-          borderRadius: "5px",
-        }}
-      >
-        Switch to {useTheme.theme === "Light" ? "Dark" : "Light"} Theme
-      </button>
-    </>
+    <button
+      style={{
+        border: "none",
+        borderRadius: "5px",
+        padding: "10px 20px",
+        cursor: "pointer",
+        background: theme === "Light" ? "black" : "white",
+        color: theme === "Light" ? "white" : "black",
+      }}
+      onClick={() => setTheme(theme === "Light" ? "Dark" : "Light")}
+    >
+      Switch Theme to {theme === "Light" ? "Dark" : "Light"}
+    </button>
   );
 };
-
-export { DisplayTogller };
