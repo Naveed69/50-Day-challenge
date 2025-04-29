@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import "./App.css";
 import { Display } from "./components/Display";
 import { UseThemeContext } from "./ContextApi/ThemeContext/ThemeContex";
 function App() {
   const { theme } = UseThemeContext();
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
   return (
     <div
       style={{

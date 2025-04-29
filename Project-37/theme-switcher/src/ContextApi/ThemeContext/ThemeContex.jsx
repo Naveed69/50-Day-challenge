@@ -3,7 +3,10 @@ import { useContext, createContext, useState } from "react";
 const ThemeContext = createContext(null);
 
 export const ThemeProvider = (props) => {
-  const [theme, setTheme] = useState("Light");
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme || "Light";
+  });
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {props.children}
