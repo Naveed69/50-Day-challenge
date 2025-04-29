@@ -7,8 +7,8 @@ const Content = () => {
   return (
     <div
       style={{
-        backgroundColor: theme === "Light" ? "#f0f0f0" : "#222",
-        color: theme === "Light" ? "#000" : "#fff",
+        backgroundColor: theme === "Light" ? "white" : "black",
+        color: theme === "Light" ? "black" : "white",
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",

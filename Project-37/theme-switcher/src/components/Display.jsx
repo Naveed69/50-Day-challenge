@@ -13,8 +13,8 @@ const DisplayTogller = () => {
           padding: "10px 20px",
           margin: "20px",
           cursor: "pointer",
-          backgroundColor: useTheme.theme === "Light" ? "#333" : "#fff",
-          color: useTheme.theme === "Light" ? "#fff" : "#333",
+          backgroundColor: useTheme.theme === "Light" ? "black" : "white",
+          color: useTheme.theme === "Light" ? "white" : "black",
           border: "none",
           borderRadius: "5px",
         }}
