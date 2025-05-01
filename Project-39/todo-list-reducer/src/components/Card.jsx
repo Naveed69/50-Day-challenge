@@ -1,27 +1,24 @@
-export const Card = ({ task, dispatch, ACTION }) => {
-  const handleDelete = () => {
-    dispatch({ type: ACTION.DELETE_TODO, id: task.id });
+export const Card = ({ task, dispatch, ACTIONS }) => {
+  //handle-complete
+  const handleComplete = () => {
+    dispatch({ type: ACTIONS.COMPLETED, id: task.id });
   };
-  const handleCompleted = () => {
-    dispatch({ type: ACTION.COMPLETED, id: task.id });
+
+  //handle-Delete
+  const handleDelete = () => {
+    dispatch({ type: ACTIONS.DELETETODO, id: task.id });
   };
   return (
     <>
-      <span
-        style={
-          task.completed
-            ? {
-                color: "rgb(161, 154, 154)",
-              }
-            : undefined
-        }
-      >
+      <p style={task.completed ? { color: "rgb(190, 186, 186)" } : undefined}>
         {task.task}
-      </span>
-      <button onClick={handleCompleted}>
-        {task.completed ? "mark Not-completed" : "mark as completed"}
+      </p>
+      <button onClick={handleComplete}>
+        {task.completed ? "mark as not completed " : "mark as Complete"}
       </button>
-      <button onClick={handleDelete}>Delete</button>
+      <button type="button" onClick={handleDelete}>
+        DELETE
+      </button>
     </>
   );
 };
