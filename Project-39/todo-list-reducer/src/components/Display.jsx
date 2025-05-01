@@ -3,6 +3,7 @@ const { useState, useReducer } = require("react");
 const ACTION = {
   ADD_TODO: "add-todo",
   DELETE_TODO: "delete-todo",
+  COMPLETED: "completed-todo",
 };
 
 export const Display = () => {
@@ -10,9 +11,16 @@ export const Display = () => {
   function reducer(state, action) {
     switch (action.type) {
       case ACTION.ADD_TODO:
-        return [...state, { task: action.payload.name, id: Date.now() }];
+        return [
+          ...state,
+          { task: action.payload.name, id: Date.now(), completed: false },
+        ];
       case ACTION.DELETE_TODO:
         return [...state].filter((t) => t.id !== action.id);
+      case ACTION.COMPLETED:
+        return [...state].map((t) =>
+          t.id === action.id ? { ...t, completed: !t.completed } : t
+        );
       default:
         return state;
     }
