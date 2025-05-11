@@ -1,5 +1,4 @@
-import { Display } from "./Components/Display";
-import "./App.css";
+import { Display } from "./Components/DisplayProduct/Display";
 
 function App() {
   return (
