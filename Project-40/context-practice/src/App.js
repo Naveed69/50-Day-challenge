@@ -1,10 +1,11 @@
 import { Display } from "./Components/DisplayProduct/Display";
+import { CartContextprovider } from "./Contex Api/CartContext";
 
 function App() {
   return (
-    <div>
+    <CartContextprovider>
       <Display />
-    </div>
+    </CartContextprovider>
   );
 }
 
