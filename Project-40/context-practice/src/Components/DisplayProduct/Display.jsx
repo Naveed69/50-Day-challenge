@@ -5,7 +5,7 @@ export const Display = () => {
   const { cart, setCart } = useCart();
   const Items = [
     { id: 1, item: "Laptop", price: 10000 },
-    { id: 2, item: "Pendrive", price: 100 },
+    { id: 2, item: "Pendrive", price: 150 },
     { id: 3, item: "i-Phone", price: 2500 },
   ];
   return (
