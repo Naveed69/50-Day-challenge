@@ -1,3 +1,10 @@
+import { useReducer } from "react";
+
 export const Display = () => {
-  return <h1>Display</h1>;
+  const [state,dispatch]=useReducer
+  return (
+    <>
+      <h1>Display</h1>
+    </>
+  );
 };
