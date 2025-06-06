@@ -1,4 +1,5 @@
 import { pipe } from "lodash/fp";
+import { produce } from "immer";
 export const Display = () => {
   const username = "         Naveed      ";
   const trim = (name) => name.trim();
@@ -13,6 +14,26 @@ export const Display = () => {
   //   let res = add(3);
   //   let resb = res(2);
   //   console.log(resb(5));
+
+  //***********Immer**********
+
+  const obj = {
+    name: "naveed",
+    age: 27,
+    company: { cname: "Avira Digital", location: "Hyderabad" },
+  };
+
+  let obj2 = produce(obj, (draftState) => {
+    draftState.name = "Roma";
+    draftState.company.location = "bengalore";
+  });
+
+  console.log(obj);
+  console.log(obj2);
+
+  let arr = ["book1", "book2", "book3"];
+  let filteredArr = arr.map((a) => (a === "book2" ? "book4" : a));
+  console.log(filteredArr);
 
   return (
     <>
