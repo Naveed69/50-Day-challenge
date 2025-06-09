@@ -35,8 +35,8 @@ export const Display = () => {
   let arr = ["book1", "book2", "book3"];
   let filteredArr = arr.map((a) => (a === "book2" ? "book4" : a));
   // console.log(filteredArr);
-
-  console.log(store);
+  store.dispatch({ type: "ADD_TASK", payload: { task: "Cricket" } });
+  console.log(store.getState());
   return (
     <>
       <h1>Redux lab</h1>

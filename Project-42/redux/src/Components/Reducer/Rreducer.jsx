@@ -1,5 +1,5 @@
 let id = 0;
-const Reducer = (state, action) => {
+const Reducer = (state = [], action) => {
   switch (action.type) {
     case "ADD_TASK":
       return [
