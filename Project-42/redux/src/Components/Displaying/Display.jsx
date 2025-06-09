@@ -1,5 +1,6 @@
 import { pipe } from "lodash/fp";
 import { produce } from "immer";
+import store from "../StoreRedux/ReduxStoreTask";
 export const Display = () => {
   const username = "         Naveed      ";
   const trim = (name) => name.trim();
@@ -28,13 +29,14 @@ export const Display = () => {
     draftState.company.location = "bengalore";
   });
 
-  console.log(obj);
-  console.log(obj2);
+  // console.log(obj);
+  // console.log(obj2);
 
   let arr = ["book1", "book2", "book3"];
   let filteredArr = arr.map((a) => (a === "book2" ? "book4" : a));
-  console.log(filteredArr);
+  // console.log(filteredArr);
 
+  console.log(store);
   return (
     <>
       <h1>Redux lab</h1>
