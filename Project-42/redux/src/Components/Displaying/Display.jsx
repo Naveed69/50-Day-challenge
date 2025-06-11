@@ -1,6 +1,7 @@
 import { pipe } from "lodash/fp";
 import { produce } from "immer";
 import store from "../StoreRedux/ReduxStoreTask";
+import { Add_Task, Completed_Task, Remove_Task } from "../Actions/Task_Actions";
 export const Display = () => {
   const username = "         Naveed      ";
   const trim = (name) => name.trim();
@@ -35,8 +36,20 @@ export const Display = () => {
   let arr = ["book1", "book2", "book3"];
   let filteredArr = arr.map((a) => (a === "book2" ? "book4" : a));
   // console.log(filteredArr);
-  store.dispatch({ type: "ADD_TASK", payload: { task: "Cricket" } });
+  store.dispatch(Add_Task("cricket"));
   console.log(store.getState());
+
+  // const unsubscribe = store.subscribe(() => {
+  //   console.log("updated", store.getState());
+  // });
+
+  // store.dispatch(Remove_Task(1));
+
+  // unsubscribe();
+  // store.dispatch(Remove_Task(2));
+  store.dispatch(Completed_Task(2));
+  console.log(store.getState());
+
   return (
     <>
       <h1>Redux lab</h1>
