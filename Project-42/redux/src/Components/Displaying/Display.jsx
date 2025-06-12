@@ -1,7 +1,7 @@
 import { pipe } from "lodash/fp";
 import { produce } from "immer";
-import store from "../StoreRedux/ReduxStoreTask";
-import { Add_Task, Completed_Task, Remove_Task } from "../Actions/Task_Actions";
+import store from "../Store/configureStore";
+import { Add_Task, Completed_Task, Remove_Task } from "../Store/Task";
 export const Display = () => {
   const username = "         Naveed      ";
   const trim = (name) => name.trim();

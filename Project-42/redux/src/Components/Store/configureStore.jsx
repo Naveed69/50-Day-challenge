@@ -1,5 +1,5 @@
 import { legacy_createStore as createStore } from "redux";
-import Reducer from "../Reducer/Rreducer";
+import Reducer from "./Task";
 
 const store = createStore(Reducer);
 
