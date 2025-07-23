@@ -1,16 +1,17 @@
-import { createSclice, nanoid } from "@reduxjs/toolkit";
-const intitialState = {
+import { createSlice, nanoid } from "@reduxjs/toolkit";
+const initialState = {
   todos: [],
 };
-const TaskSlice = createSclice({
+const TaskSlice = createSlice({
   name: "todo",
-  intitialState,
+  initialState,
   reducers: {
     add_task: (state, action) => {
-      const task = { id: nanoid, task: action.payload };
+      const task = { id: nanoid(), task: action.payload };
       state.todos.push(task);
     },
   },
 });
 
 export default TaskSlice.reducer;
+export const { add_task } = TaskSlice.actions;
