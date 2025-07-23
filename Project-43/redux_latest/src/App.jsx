@@ -1,26 +1,26 @@
 import { useState } from "react";
 import "./App.css";
-import { useDispatch, useSelector } from "react-redux";
-import { add_task } from "./store/TaskSlice";
+import { useDispatch } from "react-redux";
+import { addNewTask } from "./store/TaskSlice";
 function App() {
   const [input, setInput] = useState("");
   const dispatch = useDispatch();
-  const tasks = useSelector((state) => state.todos);
-  const addNewTask = (e) => {
+  const addinput = (e) => {
     e.preventDefault();
-    dispatch(add_task(input));
+    dispatch(addNewTask(input));
     setInput("");
   };
   return (
     <>
       <h1>Hello </h1>
-      <form onSubmit={addNewTask}>
+      <form onSubmit={addinput}>
         <input
           type="text"
+          name="input"
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <button type="submit">Add</button>
+        <button>Add</button>
       </form>
     </>
   );
